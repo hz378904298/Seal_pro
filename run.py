@@ -43,7 +43,7 @@ def main():
             s = host + ':' + port + ':' + protocol + ':none:' + obfs + ':' + base64.b64encode(
                 password.encode('utf-8')).decode() + '/?remarks=' + base64.b64encode(
                 name.encode('utf-8')).decode() + '&protoplasm=&obfsparam='
-            #print(s)
+            print(s)
             ssr = 'ssr://' + base64.b64encode(s.encode('utf-8')).decode()
             # with open(str(datetime.date.today())+'.txt','a') as f:
             # f.write(ssr+'\n')
@@ -51,6 +51,7 @@ def main():
             ssr = ssr + '\n'
             
             a=a+ssr
+            print(a)
         return a
             
     except Exception as e:
